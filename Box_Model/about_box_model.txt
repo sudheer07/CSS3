@@ -3,3 +3,23 @@
  Properties of rectangular box are width, height, padding, borders, margin.
 
  These properties define size of an element
+
+ Padding :
+ -------
+ Padding is space within the element.
+ 
+ Padding provides space between the content of an element and the border of element.
+
+ Padding increases the width of an element.
+
+ Border :
+ ------
+ Border form the outline to the element. 
+
+ Borders increases the width of an element.
+
+ Margin :
+ ------
+ Margin is space between the elements
+
+ When Margin is used for an element, then amount of space it takes within the layout changes.
