@@ -1,0 +1,5 @@
+ Every element on web page is considered as rectangular box.
+
+ Properties of rectangular box are width, height, padding, borders, margin.
+
+ These properties define size of an element
