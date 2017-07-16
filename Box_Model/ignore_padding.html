@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>box model</title>
+		<style type="text/css">
+			*{
+				padding:0;
+				margin:0;
+			}
+			html{
+				background:#786;
+			}
+			.div1{
+				width:500px;
+				height:700px;
+				background:#fcc;
+				margin:0px auto;
+				border:2px solid blue;
+				padding:38px;
+				// divl width = 500+38+38+2+2=580px;
+			}
+			.div2{
+				background:#786;
+				width:440px;
+				padding:48px;
+				border:2px solid red;
+				<!-- 
+					here previously the width was 400px, width = 400+48+48+2+2=500px;
+					width is increased to 440px;
+					outer div width = 580px;
+					inner div width = 440+48+48+2+2=540px;
+					so the padding on right-side of .div1 was ignored by browser to make .div2 fit
+				-->
+			}
+			p{
+				background:#fff;
+				height:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<div class="div2">
+				<p>
+					The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
