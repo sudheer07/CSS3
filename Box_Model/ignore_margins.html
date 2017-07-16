@@ -12,19 +12,43 @@
 				background:#786;
 			}
 			.div1{
-				width:500px;
+				width:496px;
 				height:700px;
 				background:#fcc;
 				margin:0px auto;
 				border:2px solid blue;
+			<!-- 
+				.div1 width = width+padding-left+padding-right+border-right+border-left
+				            = 496+0+0+2+2 = 500px;
+			-->
 			}
 			.div2{
 				background:#786;
-				width:256px;
+				width:260px;
 				padding:20px;
 				border:2px solid red;
 				margin:100px;
-				margin-right:100px; // here the this margin is ignored by the browser to make the element fit
+				margin-right:100px;
+			<!--
+				Here the .div2 actual width = width+padding-left+padding-right+border-right+border-left
+											=260+20+20+2+2=304px;
+				the space .div2 takes is = actual width + margin left + margin right
+										 =304+100+100=504px.
+				when displayed in browser it looks like .div2 fits inside .div1
+				.div width = 500px and .div2 width = 504px
+				Here the browser ignores margin value to make .div2 fit inside .div1
+				
+				If further 100px margin added to right of .div2
+				
+				then the space .div2 takes up is =
+				=width+padding-left+padding-right+border-right+border-left+margin-right
+				=260+20+20+2+2+100+100+100 =604px
+				
+				But .div1 width = 500px
+				
+				.div2 which is 604px cannot fit inside .div1 which is 500px
+				so the browser ignores added margin-right:100px to make .div2 fit inside .div1
+			-->
 			}
 			p{
 				background:#fff;
