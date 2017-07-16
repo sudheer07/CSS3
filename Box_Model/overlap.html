@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>overlap</title>
+		<style type="text/css">
+			*{
+				padding:0;
+				margin:0;
+			}
+			html{
+				background:#786;
+			}
+			.div1{
+				width:500px;
+				height:700px;
+				background:#fcc;
+				margin:0px auto;
+				border:2px solid blue;
+				overflow:hidden;
+				//overflow:auto;
+				<!--
+					overflow has four possible values visible,hidden,scroll,auto;
+					overflow:hidden when used the overflown content gets cutoff
+					overflow:auto when used can see the scrollbars using which we can scroll to see the
+					overflown content
+				-->
+				// divl width = width+boder-left+border-right
+							  = 500+2+2=504px;
+			}
+			.div2{
+				background:#786;
+				width:444px;
+				padding:48px;
+				border:2px solid red;
+				<!-- 
+					.div1 width = 504px
+					
+					.div2 width = width+padding-left+padding-right+border-left+border-right;
+								= 404+48+48+2+2 =504px
+					Now the .div2 fits exactly inside .div1
+					
+					when the width is increased to 40px then width = 444px;
+					
+					now the .div2 width = width+padding-left+padding-right+border-left+border-right;
+										= 444+48+48+2+2=544px;
+					now .div2 having width 544px overflows or overlaps .div1 having width 504px
+					
+					we can control .div2 by using overflow property in .div1
+				-->
+			}
+			p{
+				background:#fff;
+				height:100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div1">
+			<div class="div2">
+				<p>
+					The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. 
+				</p>
+			</div>
+		</div>
+	</body>
+</html>
