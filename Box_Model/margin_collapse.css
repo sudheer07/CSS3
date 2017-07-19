@@ -16,11 +16,45 @@ h1{
 }
 p{
 	background:#ccc;
-	margin:20px 0px;
 	text-align:justify;
+	margin:20px 0px;
+	/*
+	margin of 20px at top and bottom 0px left and right added
+	the margins paragraphs have nothing separting them and are touching margin collapse happens
+	istead of getting 40px(20px bottom-margin + 20px top-margin) margins collapse to only 20px
+	*/
 	margin-top:30px;
+	/*
+	margin-top:30px rule over-writes the margin:20px 0px rule
+	now  margin-top:30px and margin-bottom:20px; for all paragraphs
+	as the paragraphs have nothing separating them and are touching margin collapse happens
+	now the margins collapse to greater of the two margin values(30px, 20px) 30px
+	*/
 }
 div{
 	margin:20px 0px;
+	/*
+		----- margin collapse between parent and child elements -----
+		margin of 20px is added to top and bottom of div and 0px to the left and right
+		now paragraph having margins 30px to top and 20px to the bottom and they collapse to greater of two 30px
+		as div having margins 20px to top and bottom and paragraph having margins collapsed to 30px before
+		as div with margin 20px and paragraph with 30px are touching they collapse to greater of two 30px and nothing happens
+	*/
 	border:1px solid black;
+	/*
+		here when border is added to div and border separates div and paragraph margins do not touch
+		the margin between div and paragraph can be visible.
+	*/
+	//padding:1px;
+	/*
+		instead of adding borders we can add padding and it also separates paragraph and div and are not touching
+		any more margin between div and paragraph can be visible.
+	*/
+	/*
+		------ Conclusion --------
+		Margin collapse only happens vertically
+		Margin collapse only when they are touching
+		If something separting margins such as (padding and borders) so the margins donot touch
+		and margins donot collapse.
+	*/
 }
