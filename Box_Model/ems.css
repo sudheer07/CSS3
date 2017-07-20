@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    background: #eee;
+}
+body{
+    width:880px;
+    background: rgba(255,70,0,0.5);
+    margin: 0px auto;
+    padding: 10px;
+    font:12px "Times new roman";
+}
+#section1{
+    width:400px;
+    background: rgba(255,0,255,0.7);
+    padding: 10px;
+    float:left;
+    margin-top: 2em;
+}
+#section2{
+    width:400px;
+    background: rgba(255,255,0,0.5);
+    float: right;
+    padding: 10px;
+}
+p{
+    text-align: justify;
+    padding: 5px;
+    text-indent: 10px;
+}
+body:after{
+    content:"";
+    display: block;
+    clear:both;
+}
+h2{
+    margin-top: 1em;
+    font-size: 20px;
+}
